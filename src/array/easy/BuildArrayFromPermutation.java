@@ -1,5 +1,6 @@
 package array.easy;
 
+// 1920
 public class BuildArrayFromPermutation {
     public static void main(String[] args) {
 
