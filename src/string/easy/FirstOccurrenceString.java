@@ -18,4 +18,8 @@ public class FirstOccurrenceString {
 
         return -1;
     }
+
+    public static int strStr1(String haystack, String needle) {
+        return haystack.indexOf(needle);
+    }
 }
