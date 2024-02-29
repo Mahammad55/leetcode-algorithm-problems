@@ -2,6 +2,7 @@ package array.easy;
 
 import java.util.Arrays;
 
+// 1
 public class TwoSum {
     public static void main(String[] args) {
         int[] ints = TwoSum.twoSum(new int[]{3, 2, 4}, 6);
