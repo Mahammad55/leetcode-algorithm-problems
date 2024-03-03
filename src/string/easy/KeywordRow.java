@@ -12,10 +12,9 @@ public class KeywordRow {
 
         List<String> result = new ArrayList<>();
         for (String word : words) {
-            String wordLower = word.toLowerCase();
             boolean inRow1 = true, inRow2 = true, inRow3 = true;
 
-            for (char c : wordLower.toCharArray()) {
+            for (char c : word.toLowerCase().toCharArray()) {
                 if (!row1.contains(String.valueOf(c))) {
                     inRow1 = false;
                 }
