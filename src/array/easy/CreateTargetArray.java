@@ -1,6 +1,8 @@
 package array.easy;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 // 1389
 public class CreateTargetArray {
@@ -17,6 +19,19 @@ public class CreateTargetArray {
                 target[j] = target[j - 1];
             }
             target[index[i]] = nums[i];
+        }
+
+        return target;
+    }
+
+    public static int[] createTargetArray1(int[] nums, int[] index) {
+        int[] target = new int[nums.length];
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            list.add(index[i], nums[i]);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            target[i] = list.get(i);
         }
 
         return target;
