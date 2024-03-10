@@ -1,4 +1,4 @@
-package datatype;
+package datatype.easy;
 
 // 342
 public class PowerOfFour {
