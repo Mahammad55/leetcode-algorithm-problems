@@ -3,7 +3,7 @@ package string.medium;
 // 5
 public class LongestPalindromic {
     public static void main(String[] args) {
-        System.out.println(longestPalindrome("babad"));
+        System.out.println(longestPalindrome("a"));
     }
 
     public static String longestPalindrome(String s) { //  babad  bab
