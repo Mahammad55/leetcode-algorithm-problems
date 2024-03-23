@@ -1,4 +1,4 @@
-package datatype.easy;
+package numeric.easy;
 
 // 342
 public class PowerOfFour {

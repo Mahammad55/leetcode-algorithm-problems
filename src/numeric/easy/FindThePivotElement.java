@@ -1,4 +1,4 @@
-package datatype.easy;
+package numeric.easy;
 
 // 2485
 public class FindThePivotElement {
