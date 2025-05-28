@@ -20,6 +20,21 @@ public class ReverseLinkedList {
         return previous;
     }
 
+    public ListNode reverseList1(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode previous = null;
+        ListNode node = head.next;
+
+        while (node != null) {
+            head.next = previous;
+            previous = head;
+            head = node;
+            node = node.next;
+        }
+        head.next = previous;
+        return head;
+    }
+
     public static class ListNode {
         int val;
         ListNode next;
