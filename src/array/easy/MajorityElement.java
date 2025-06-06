@@ -1,5 +1,6 @@
 package array.easy;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -74,5 +75,21 @@ public class MajorityElement {
         }
 
         return -1;
+    }
+
+    public static int majorityElement4(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length / 2];
+    }
+
+    public static int majorityElement5(int[] nums) {
+        int count = 0;
+        int maj = nums[0];
+        for (int num : nums) {
+            if (count == 0) maj = num;
+            if (num == maj) count++;
+            else count--;
+        }
+        return maj;
     }
 }
