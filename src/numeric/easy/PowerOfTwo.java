@@ -7,14 +7,14 @@ public class PowerOfTwo {
     }
 
     public boolean isPowerOfTwo(int n) {
-        double result = Math.log(n) / Math.log(2);
+        if (n <= 0) return false;
 
-        if (n == 536870912) return true;
-        else return result % 1 == 0;
+        double result = Math.log(n) / Math.log(2);
+        return result % 1 == 0;
     }
 
     public boolean isPowerOfTwo1(int n) {
-        if (n == -2147483648) return false;
+        if (n <= 0) return false;
         int one = 0;
 
         for (char c : Integer.toBinaryString(n).toCharArray()) {
@@ -22,5 +22,21 @@ public class PowerOfTwo {
         }
 
         return one == 1;
+    }
+
+    public boolean isPowerOfTwo2(int n) {
+        if (n <= 0) return false;
+
+        long ones = Integer.toBinaryString(n)
+                .chars()
+                .filter(c -> c == '1')
+                .count();
+
+        return ones == 1;
+    }
+
+    public boolean isPowerOfTwo3(int n) {
+        return n > 0 &&
+                Integer.toBinaryString(n).chars().filter(c -> c == '1').count() == 1;
     }
 }
