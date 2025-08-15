@@ -17,4 +17,15 @@ public class PowerOfFour {
         double logValue = Math.log(n) / Math.log(4);
         return Math.floor(logValue) == logValue;
     }
+
+    public static boolean isPowerOfFour2(int n) {
+        int one = 0, zero = 0;
+
+        for (char c : Integer.toBinaryString(n).toCharArray()) {
+            if (c == '0') zero++;
+            else one++;
+        }
+
+        return one == 1 && zero % 2 == 0;
+    }
 }
