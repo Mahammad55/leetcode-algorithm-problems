@@ -21,6 +21,6 @@ public class DayOfTheWeek {
         return days[date.getDayOfWeek().getValue() - 1];
     }
 
-    // Zeller's Congruence 
+    // Zeller's Congruence
 
 }
